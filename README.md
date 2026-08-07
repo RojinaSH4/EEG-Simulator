@@ -1,10 +1,10 @@
 # EEG Band Separation & Brainwave Visualizer
 An end-to-end embedded and desktop application system for separating EEG frequency bands, determining brain states, and visualizing power distribution in real-time.
 ---
-## 📌 Project Overview
+## Project Overview
 This project simulates real-time EEG signal processing by taking raw band signals (Delta, Theta, Alpha, Beta) through operational amplifier circuits, processing them using an **ATmega32** microcontroller, and transmitting parsed power percentages over Serial/UART communication to a **C# WinForms** desktop interface for live data visualization.
 ---
-## 🛠️ System Architecture & Workflow
+## System Architecture & Workflow
 ```text
 [Signal Sources] -> [Op-Amp Conditioning] -> [ATmega32 ADC] -> [UART Transmission] -> [com0com Virtual Port] -> [C# WinForms GUI]
 ```
@@ -21,7 +21,7 @@ This project simulates real-time EEG signal processing by taking raw band signal
    - Safely updates UI controls via asynchronous thread-marshaling (`BeginInvoke`).
    - Renders live percentage column charts and state indicators.
 ---
-## 🧠 Brain State Logic
+## Brain State Logic
 
 | Band | Threshold / Condition | State Output |
 | :--- | :--- | :--- |
@@ -32,7 +32,7 @@ This project simulates real-time EEG signal processing by taking raw band signal
 | **None** | Low/Zero Signal Amplitude | No Signal |
 
 ---
-## 📁 Repository Structure
+## Repository Structure
 ```text
 ├── docs/        # Project diagrams, PCB, schematic, and GUI screenshots
 ├── firmware/    # CodeVisionAVR source code (.c) and ATmega32 configuration
@@ -40,7 +40,7 @@ This project simulates real-time EEG signal processing by taking raw band signal
 └── software/    # C# .NET WinForms desktop application
 ```
 ---
-## 🚀 Getting Started
+## Getting Started
 ### Prerequisites
 - **Proteus Design Suite** (for hardware simulation)
 - **CodeVisionAVR** or **Microchip Studio** (for compiling AVR firmware)
