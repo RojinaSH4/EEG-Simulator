@@ -53,6 +53,3 @@ This project simulates real-time EEG signal processing by taking raw band signal
    Open `hardware/Brain Wave Band Seperation.pdsprj`, configure the `COMPIM` component to use `COM1` at `9600 Baud`, and start the simulation.
 3. **Launch Desktop App:**  
    Open `software/EEG Simulator.sln` in Visual Studio, build and run the application. Select `COM2` from the connection panel and click **Connect Serial Port**.
----
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
