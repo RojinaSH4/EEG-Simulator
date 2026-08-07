@@ -1,0 +1,20 @@
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\bin\Debug\EEG Band Seperation.exe.config
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\bin\Debug\EEG Band Seperation.exe
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\bin\Debug\EEG Band Seperation.pdb
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.AssemblyReference.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG_Band_Seperation.Properties.Resources.resources
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.GenerateResource.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.CoreCompileInputs.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG Band Seperation.exe
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG Band Seperation.pdb
+C:\Users\arsha\Desktop\C# Samples\EEG Simulator\EEG Band Seperation\obj\Debug\EEG_Band_Seperation.EEGSimulator.resources
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\bin\Debug\EEG Band Seperation.exe.config
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\bin\Debug\EEG Band Seperation.exe
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\bin\Debug\EEG Band Seperation.pdb
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.AssemblyReference.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG_Band_Seperation.EEGSimulator.resources
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG_Band_Seperation.Properties.Resources.resources
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.GenerateResource.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG Band Seperation.csproj.CoreCompileInputs.cache
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG Band Seperation.exe
+C:\Users\arsha\Desktop\C# Samples\EEG Band Seperation\software\EEG Band Seperation\obj\Debug\EEG Band Seperation.pdb

@@ -1,0 +1,53 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+brain_state                                                                       0x0260       1
+total_power                                                                       0x0261       4
+delta_percent                                                                     0x0265       1
+theta_percent                                                                     0x0266       1
+alpha_percent                                                                     0x0267       1
+beta_percent                                                                      0x0268       1
+lcd_buffer                                                                        0x0269      17
+uart_buffer                                                                       0x027A      80
+_base_y                                                                           0x02CA       4
+_lcd_x                                                                            0x02CE       1
+_lcd_y                                                                            0x02CF       1
+_lcd_maxx                                                                         0x02D0       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+delta_value                                                                       R4,R5        2
+theta_value                                                                       R6,R7        2
+alpha_value                                                                       R8,R9        2
+beta_value                                                                        R10,R11      2
+max_value                                                                         R12,R13      2
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+read_adc                                                                          0x000D9     15
+read_adc_average                                                                  0x000E8     40
+ReadEEG                                                                           0x00110     13
+ProcessEEG                                                                        0x0011D    128
+DisplayEEG                                                                        0x0019D    113
+UART_SendChar                                                                     0x0020E      7
+UART_SendString                                                                   0x00215     15
+main                                                                              0x00224    116
+put_buff_G100                                                                     0x00298     64
+_print_G100                                                                       0x002D8    308
+sprintf                                                                           0x0040C     52
+_lcd_write_nibble_G101                                                            0x00440     20
+_lcd_write_data                                                                   0x00454     12
+lcd_gotoxy                                                                        0x00460     17
+lcd_clear                                                                         0x00471     14
+lcd_putchar                                                                       0x0047F     32
+lcd_puts                                                                          0x0049F     15
+lcd_putsf                                                                         0x004AE     19
+lcd_init                                                                          0x004C1     47
+strlen                                                                            0x004F0     12
+strlenf                                                                           0x004FC     13
