@@ -1,0 +1,14 @@
+# Ignore Proteus simulation files from language detection
+*.pdsprj linguist-vendored
+*.workspace linguist-vendored
+
+# Ignore CodeVisionAVR generated files, assembly outputs, and project settings
+*.prj linguist-vendored
+*.i linguist-vendored
+*.s linguist-vendored
+*.lst linguist-vendored
+*.hex linguist-vendored
+*.cof linguist-vendored
+
+# Ignore Visual Studio generated files
+*.vs/ linguist-vendored
