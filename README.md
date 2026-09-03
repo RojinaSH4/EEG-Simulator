@@ -1,4 +1,4 @@
-# EEG Band Separation & Brainwave Visualizer
+<img width="872" height="553" alt="image" src="https://github.com/user-attachments/assets/3d7118da-91b9-4927-a188-68a796afc6eb" /># EEG Band Separation & Brainwave Visualizer
 
 ## About the Project
 This is an end-to-end embedded and desktop visualization system built to simulate real-time biomedical signal processing. 
@@ -63,6 +63,9 @@ Through this project, I significantly improved my understanding of:
 
 ### Main Dashboard (WinForms GUI)
 <img width="800" alt="Main Dashboard GUI" src="docs/gui.PNG" />
+
+### EEG Simulator
+<img width="872" height="553" alt="EEG_Sim" src="docs/EEG_Sim.png" />
 
 ---
 
