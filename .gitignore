@@ -1,0 +1,15 @@
+# Visual Studio temporary files
+.vs/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+
+# CodeVisionAVR & Proteus generated outputs
+*.hex
+*.cof
+*.i
+*.s
+*.lst
+*.obj
+*.pdsbak
