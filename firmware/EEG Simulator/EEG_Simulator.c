@@ -388,7 +388,5 @@ while (1)
          UART_SendString(uart_buffer);  
        
        delay_ms(500);
-      }      
-      
-      
+      }            
 }
