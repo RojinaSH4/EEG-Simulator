@@ -1,8 +1,12 @@
-# Set explicit language for source code files
+# Treat hardware, docs, and build folders as documentation so Linguist completely ignores them
+hardware/* linguist-documentation
+hardware/**/* linguist-documentation
+firmware/* linguist-documentation
+firmware/**/* linguist-documentation
+.vs/* linguist-documentation
+.vs/**/* linguist-documentation
+
+# Enforce primary languages
 *.cs linguist-language=C#
 *.c linguist-language=C
 *.h linguist-language=C
-
-# Ignore all other extensions from stats
-*.pdsprj linguist-vendored
-*.prj linguist-vendored
