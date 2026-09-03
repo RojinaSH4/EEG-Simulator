@@ -10,4 +10,3 @@ firmware/**/* linguist-documentation
 *.cs linguist-language=C#
 *.c linguist-language=C
 *.h linguist-language=C
-*.al linguist-vendored
