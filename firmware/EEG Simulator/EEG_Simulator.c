@@ -1,6 +1,6 @@
 /*******************************************************
 Project : EEG Brainwave Simulator
-Version : 0.1
+Version : 0.1.1
 Date    : 7/27/2026
 Author  : Rojina Shahabi
 Comments: Microcontroller side firmware for acquiring EEG 
