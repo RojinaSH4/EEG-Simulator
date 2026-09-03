@@ -83,3 +83,4 @@ Through this project, I significantly improved my understanding of:
 
 ## Notes
 This project was created for learning purposes and to showcase my skills in embedded systems, biomedical signal conditioning, and C# desktop application development.
+
