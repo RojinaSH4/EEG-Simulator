@@ -1,55 +1,85 @@
 # EEG Band Separation & Brainwave Visualizer
-An end-to-end embedded and desktop application system for separating EEG frequency bands, determining brain states, and visualizing power distribution in real-time.
----
-## Project Overview
-This project simulates real-time EEG signal processing by taking raw band signals (Delta, Theta, Alpha, Beta) through operational amplifier circuits, processing them using an **ATmega32** microcontroller, and transmitting parsed power percentages over Serial/UART communication to a **C# WinForms** desktop interface for live data visualization.
----
-## System Architecture & Workflow
-```text
-[Signal Sources] -> [Op-Amp Conditioning] -> [ATmega32 ADC] -> [UART Transmission] -> [com0com Virtual Port] -> [C# WinForms GUI]
-```
-1. **Hardware / Conditioning Stage:**  
-   - Filters and amplifies EEG signals across four major frequency bands (Delta, Theta, Alpha, Beta).
-2. **Firmware Stage (CodeVisionAVR):**  
-   - Reads analog signals via ADC channels.
-   - Computes dynamic power ratios and determines dominant brain states (`Deep Sleep`, `Drowsy`, `Relaxed`, `Focused`).
-   - Displays real-time status on a $16 \times 2$ LCD screen.
-   - Formats and sends raw telemetry strings over UART at 9600 Baud.
-3. **Software Stage (C# WinForms):**  
-   - Receives serial streams via real or virtual COM ports (`com0com`).
-   - Uses Regular Expressions (Regex) to parse raw stream tokens into structured data objects.
-   - Safely updates UI controls via asynchronous thread-marshaling (`BeginInvoke`).
-   - Renders live percentage column charts and state indicators.
----
-## Brain State Logic
 
-| Band | Threshold / Condition | State Output |
-| :--- | :--- | :--- |
-| **Delta** | Percentage $\ge 50\%$ | Deep Sleep |
-| **Theta** | Percentage $\ge 40\%$ | Drowsy |
-| **Alpha** | Percentage $\ge 40\%$ | Relaxed |
-| **Beta** | Percentage $\ge 45\%$ | Focused |
-| **None** | Low/Zero Signal Amplitude | No Signal |
+## About the Project
+This is an end-to-end embedded and desktop visualization system built to simulate real-time biomedical signal processing. 
+I created this project to bridge hardware signal conditioning with desktop software, practice multi-layer system architecture, and gain hands-on experience in processing multi-channel analog signals, microcontroller firmware development, and real-time serial telemetry in C#.
+
+The system processes incoming signal sources, filters them into distinct EEG frequency bands via Op-Amp circuits, determines the dominant brain state using an ATmega32 microcontroller, and streams live telemetry to a C# WinForms application for real-time visualization.
 
 ---
-## Repository Structure
-```text
-├── docs/        # Project diagrams, PCB, schematic, and GUI screenshots
-├── firmware/    # CodeVisionAVR source code (.c) and ATmega32 configuration
-├── hardware/    # Proteus circuit design (.pdsprj)
-└── software/    # C# .NET WinForms desktop application
-```
+
+## Features
+- **Analog Signal Conditioning:** Active Op-Amp filtering circuits designed to isolate key EEG frequency bands (Delta, Theta, Alpha, Beta).
+- **Microcontroller Signal Processing:** Real-time ADC sampling, dynamic power ratio calculation, and threshold-based brain state classification (`Deep Sleep`, `Drowsy`, `Relaxed`, `Focused`).
+- **Hardware Telemetry Display:** On-board 16x2 character LCD updating live system status and band percentages.
+- **Serial Telemetry Integration:** Formatted UART data transmission at 9600 Baud to external software interfaces.
+- **Real-Time Data Visualization:** C# WinForms UI displaying live percentage column charts and dynamic brain state status indicators.
+- **Thread-Safe UI Operations:** Robust async thread-marshaling using `BeginInvoke` and Regex-based stream parsing for dynamic updates.
+
 ---
-## Getting Started
-### Prerequisites
-- **Proteus Design Suite** (for hardware simulation)
-- **CodeVisionAVR** or **Microchip Studio** (for compiling AVR firmware)
-- **Visual Studio 2019/2022** with .NET Framework (for WinForms application)
-- **com0com** (Null-modem emulator for serial bridging between Proteus and C#)
-### Running the Simulation
-1. **Bridge Virtual COM Ports:**  
-   Configure `com0com` to pair two virtual ports (e.g., `COM1` $\leftrightarrow$ `COM2`).
-2. **Launch Proteus:**  
-   Open `hardware/Brain Wave Band Seperation.pdsprj`, configure the `COMPIM` component to use `COM1` at `9600 Baud`, and start the simulation.
-3. **Launch Desktop App:**  
-   Open `software/EEG Simulator.sln` in Visual Studio, build and run the application. Select `COM2` from the connection panel and click **Connect Serial Port**.
+
+## Architecture & Structure
+The project is structured into three clear domains to separate hardware design, embedded firmware, and desktop presentation layers:
+
+- **hardware (Schematic & PCB Layer)**  
+  Contains the Proteus simulation files, circuit schematics, and PCB/3D layouts. It models the signal sources and the active operational amplifier filtering stages that isolate the EEG frequency bands.
+
+- **firmware (Embedded Layer)**  
+  Contains the CodeVisionAVR C code for the ATmega32 microcontroller. It handles analog-to-digital conversion (ADC), calculates power percentages, manages local LCD output, and streams raw telemetry tokens over UART.
+
+- **software (Presentation Layer)**  
+  A C# .NET WinForms application that connects to the serial port (via real or virtual COM ports). It parses incoming data streams with Regular Expressions and updates the visualization chart safely without blocking the main UI thread.
+
+---
+
+## Concepts Used
+- **Biomedical Signal Processing:** Active bandpass filtering and EEG frequency isolation (Delta, Theta, Alpha, Beta).
+- **Embedded C Development:** ATmega32 ADC configuration, UART communication, and LCD interfacing using CodeVisionAVR.
+- **Hardware Simulation & PCB Design:** Circuit modeling, schematic capture, and 3D PCB design in Proteus.
+- **Asynchronous UI Updating:** Thread-safe operations with `BeginInvoke` in WinForms.
+- **Serial Communication Protocol:** Telemetry parsing with Regex over virtual/physical COM ports.
+
+---
+
+## What I Learned
+Through this project, I significantly improved my understanding of:
+- Translating biomedical signal conditioning concepts into physical schematic and PCB layouts.
+- Developing embedded firmware to bridge analog inputs with digital serial streams.
+- Interfacing hardware simulators (Proteus) with desktop applications using virtual serial port bridges (`com0com`).
+- Decoupling hardware data acquisition from software presentation layers in a multi-disciplinary workflow.
+
+---
+
+## Screenshots
+
+### Hardware Schematic
+<img width="1000" alt="Hardware Schematic" src="docs/Shematic_Brain%20Wave%20Band%20Seperation.jpg" />
+
+### 3D PCB View
+<img width="1000" alt="3D PCB View" src="docs/3D_Brain%20Wave%20Band%20Seperation.png" />
+
+### PCB Layout
+<img width="1000" alt="PCB Layout" src="docs/PCB_Brain%20Wave%20Band%20Seperation.png" />
+
+### Main Dashboard (WinForms GUI)
+<img width="800" alt="Main Dashboard GUI" src="docs/gui.PNG" />
+
+---
+
+## How to Run
+1. **Virtual Ports Setup:** Configure `com0com` to pair two virtual serial ports (e.g., `COM1` $\leftrightarrow$ `COM2`).
+2. **Hardware Simulation:**
+   - Compile the firmware in **CodeVisionAVR** to generate the `.hex` or `.cof` output file.
+   - Open `hardware/Brain Wave Band Seperation.pdsprj` in Proteus.
+   - Double-click the **ATmega32** microcontroller, click on **Program File**, and select the generated `.hex` (or `.cof`) file from the `firmware/` folder.
+   - Double-click the **COMPIM** component and configure it to `COM1` at `9600 Baud`.
+   - Run the simulation.
+3. **Desktop Application:**  
+   - Open `software/EEG Simulator.sln` in Visual Studio.  
+   - Build and run the project.  
+   - Select `COM2` from the dropdown menu and click **Connect Serial Port**.
+
+---
+
+## Notes
+This project was created for learning purposes and to showcase my skills in embedded systems, biomedical signal conditioning, and C# desktop application development.
