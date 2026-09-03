@@ -1,4 +1,4 @@
-<img width="872" height="553" alt="image" src="https://github.com/user-attachments/assets/3d7118da-91b9-4927-a188-68a796afc6eb" /># EEG Band Separation & Brainwave Visualizer
+# EEG Band Separation & Brainwave Visualizer
 
 ## About the Project
 This is an end-to-end embedded and desktop visualization system built to simulate real-time biomedical signal processing. 
