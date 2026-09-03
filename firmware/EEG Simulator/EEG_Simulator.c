@@ -37,9 +37,9 @@ typedef enum
     DROWSY,
     RELAXED,
     FOCUSED
+} 
 
-} BrainState;
-
+BrainState;
 BrainState brain_state = NO_SIGNAL;
 
 // Voltage Reference: AVCC pin
