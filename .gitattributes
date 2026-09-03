@@ -1,14 +1,18 @@
-# Ignore Proteus simulation files from language detection
-*.pdsprj linguist-vendored
-*.workspace linguist-vendored
+# 1. Ignore built-in generated files and simulation files in all subdirectories
+**/*.pdsprj linguist-vendored
+**/*.pdsbak linguist-vendored
+**/*.workspace linguist-vendored
+**/*.i linguist-vendored
+**/*.s linguist-vendored
+**/*.lst linguist-vendored
+**/*.hex linguist-vendored
+**/*.cof linguist-vendored
+**/*.prj linguist-vendored
+**/*.vs/** linguist-vendored
+**/*.bin linguist-vendored
+**/*.obj linguist-vendored
 
-# Ignore CodeVisionAVR generated files, assembly outputs, and project settings
-*.prj linguist-vendored
-*.i linguist-vendored
-*.s linguist-vendored
-*.lst linguist-vendored
-*.hex linguist-vendored
-*.cof linguist-vendored
-
-# Ignore Visual Studio generated files
-*.vs/ linguist-vendored
+# 2. Force language classification for actual source code
+**/*.cs linguist-language=C#
+**/*.c linguist-language=C
+**/*.h linguist-language=C
