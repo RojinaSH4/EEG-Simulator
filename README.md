@@ -53,7 +53,7 @@ Through this project, I significantly improved my understanding of:
 ## Screenshots
 
 ### Hardware Schematic
-<img width="1000" alt="Hardware Schematic" src="docs/Shematic_Brain%20Wave%20Band%20Seperation.jpg" />
+<img width="1000" alt="Hardware Schematic" src="docs/Shematic_Brain%20Wave%20Band%20Seperation.png" />
 
 ### 3D PCB View
 <img width="1000" alt="3D PCB View" src="docs/3D_Brain%20Wave%20Band%20Seperation.png" />
@@ -65,7 +65,7 @@ Through this project, I significantly improved my understanding of:
 <img width="800" alt="Main Dashboard GUI" src="docs/gui.PNG" />
 
 ### EEG Simulator
-<img width="872" height="553" alt="EEG_Sim" src="docs/EEG_Sim.png" />
+<img width="872" height="553" alt="EEG Simulator" src="docs/EEG_Sim.png" />
 
 ---
 
